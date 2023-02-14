@@ -1,0 +1,57 @@
+body {
+    font-size: 1.25rem;
+    font-family: 'Franklin Gothic Medium';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    font-weight: 600;
+}
+
+.landscape {
+    cursor: pointer;
+    position: relative;
+
+}
+
+.landscape img {
+    width: 50vw;
+}
+
+.heart {
+    position: absolute;
+    visibility: hidden;
+    transform: translate(-50%, -50%)
+}
+
+.heart.show {
+    animation: showHeart 0.5s ease;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 1rem;
+}
+
+@keyframes showHeart {
+    from {
+        opacity: 1;
+        width: 2rem;
+        visibility: visible;
+    }
+
+    to {
+        opacity: 0;
+        visibility: hidden;
+        width: 4rem;
+    }
+}
